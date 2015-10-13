@@ -61,6 +61,9 @@ assert(1 === 2, 'this is an example of a failing assertion. 1 does not equal 2.'
 
 //your code goes here
 
+assert('Gorilla' === 'Orangutan', 'The strings Gorilla and Orangutan are not equal. This will not pass.');
+assert('Gorilla' !== 'Orangutan', 'The strings are not equal and will pass');
+
 /* ========================================================================
 ----------------- Meerkats (20 points total)-------------------------------
 ===========================================================================
@@ -82,10 +85,39 @@ var sentence2 = 'Come over here so you can scratch my belly.';
 
 // your code goes here
 
+
+var s1 = sentence1.split(" ");
+console.log(s1);
+
+for (var i = 0; i < s1.length; i++){
+    s1[i] = ('chirp');
+    console.log(s1);
+}
+
+sentence1 = s1.join(' ');
+console.log(sentence1);
+
 // TODO: part #2: use a while or do-while loop to replace the words in sentence 2
 // with 'chirp' (10 points)
 
 // your code goes here
+
+/*if (word === sentenc1split.length -1) {
+  chirpString1 += "chirp."
+} else {}*/
+
+var s2 = sentence2.split(' ');
+var i = 0;
+console.log(s2);
+
+while(i < s2.length){
+    s2[i] = 'chirp';
+    i++;
+    console.log(s2);
+}
+
+sentence2 = s2.join(' ');
+console.log(sentence2);
 
 // Leave these assertions as-is! If they pass, your code works.
 assert(sentence1 === 'chirp chirp chirp.', 'sentence 1 should have 3 chirps');
@@ -102,12 +134,16 @@ assert(sentence2 === 'chirp chirp chirp chirp chirp chirp chirp chirp chirp.',
 */
 
 var favoriteAnimals = ['elephant', 'penguin', 'eagle', 'camel'];
-var nextAnimal;
+
 
 // TODO: 10 points
 // Assign one of your favorite animals to nextAnimal using Math.random() to pick
 
 // your code goes here
+
+
+var nextAnimal = favoriteAnimals[Math.floor(favoriteAnimals.length * Math.random())]; 
+console.log(nextAnimal);
 
 assert(nextAnimal, 'assign something to nextAnimal');
 
@@ -124,10 +160,10 @@ assert(nextAnimal, 'assign something to nextAnimal');
 // don't require quotes for the code to work. Remove the unnecessary quotes.
 
 var animalExhibitStats = {
-  'numberOpen': 13,
+  numberOpen: 13,
   'number closed': 2,
   'petting-zoo-open': true,
-  'mostPopular': 'Lucky the Emperor Penguin',
+  mostPopular: 'Lucky the Emperor Penguin',
   '2ndMostPopular': 'Dumbo the Depressed Donkey'
 };
 
@@ -138,7 +174,7 @@ var animalExhibitStats = {
  notation with dot notation wherever possible.
 */
 
-assert(animalExhibitStats['numberOpen'] === 13, 'there should be 13 open exhibits');
+assert(animalExhibitStats.numberOpen === 13, 'there should be 13 open exhibits');
 assert(animalExhibitStats['number closed'] === 2, 'there should be 2 closed exhibits');
 assert(animalExhibitStats['petting-zoo-open'], 'hey! =( i was promised meerkats!');
 assert(animalExhibitStats['2ndMostPopular'] === 'Dumbo the Depressed Donkey',
@@ -149,6 +185,7 @@ assert(animalExhibitStats['2ndMostPopular'] === 'Dumbo the Depressed Donkey',
 // Use the above examples to guide you.
 
 // your assert goes here
+assert(animalExhibitStats.mostPopular === 'Lucky the Emperor Penguin', 'Penguins are adorbs...');
 
 /* ==================================================================
 ----------------- Code Style (10 points) ----------------------------

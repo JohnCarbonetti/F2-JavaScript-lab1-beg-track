@@ -1,0 +1,5 @@
+var taterTots = [3, 5, 7, 12];
+for(var i = 0; i < taterTots.length; i++) {
+    taterTots[i]++;
+    console.log(taterTots[i]);
+}

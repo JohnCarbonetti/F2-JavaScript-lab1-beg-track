@@ -1,0 +1,32 @@
+-Object properties:
+
+In bracket notation you can access "it" like an array?
+
+But not in dot notation.
+
+...
+
+-Auto-boxing
+
+object version of integer. It's almost as if strings and integrs are objects too.
+
+-Paradigm - "A way to think about things" 
+
+- Syntactic sugar
+
+- Conventions are to make life easier, rules are required to make your code run
+
+- this keyword - "this context" not this object but usually used in a constructor.
+
+- ONly two things set the value of "this" - 
+
+-look up - call object with the "new" keyword
+
+"new" keyword changes the behavior of the function call?
+
+-Every constructor function has a hidden prototype which is an empty object by default.
+
+-prototype chain
+
+
+
